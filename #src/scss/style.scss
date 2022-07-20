@@ -1,0 +1,32 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/DroidSerif-Bold.ttf") format("woff"), url("../fonts/DroidSerif-BoldItalic.ttf") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+    }
+
+
+
+@import "fonts";
+
+body{
+    font-size: 15px;
+    display: flex;
+}
+span {
+    font-size: 30px;
+    @media (max-width: 767px) {
+        font-size: 15px;
+    }
+}
+div{
+    font-size: 40px;
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }  
+    background: url("../img/foto.jpg");
+}
